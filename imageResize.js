@@ -43,7 +43,7 @@ exports.handler = async (event, context, callback) => {
 
   const imageSize = 81;
   const dstBucket = "s3.dev.pennyway.co.kr"; // 리사이징된 이미지가 저장될 버켓 이름;
-  const dstKey = `profile/${userId}/${imageSize}/${uuid}_${timestamp}.${ext}`; // 리사이징된 이미지가 저장될 파일 이름  const dstKey = "profile/${userId}/${imageSize}/${uuid}_${timestamp}.${ext}"; // 리사이징 된 이미지가 저장될 파일 이름
+  const dstKey = `profile/${userId}/${imageSize}/${uuid}_${timestamp}.${ext}`; // 리사이징된 이미지가 저장될 파일 이름
 
   console.log(`srcKey: ${srcKey}`);
   console.log(`dstKey: ${dstKey}`);
