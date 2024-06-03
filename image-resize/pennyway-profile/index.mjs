@@ -1,6 +1,6 @@
 // AWS SDK 및 모듈 로드
-const AWS = require("aws-sdk");
-const sharp = require("sharp");
+import AWS from "aws-sdk";
+import sharp from "sharp";
 
 // S3 클라이언트 생성
 const s3 = new AWS.S3();
