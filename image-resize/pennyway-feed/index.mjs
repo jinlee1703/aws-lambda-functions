@@ -1,11 +1,11 @@
-const AWS = require("aws-sdk");
-const sharp = require("sharp");
+import AWS from "aws-sdk";
+import sharp from "sharp";
 
 // S3 클라이언트 생성
 const s3 = new AWS.S3();
 
 // Lambda 핸들러 함수 - Lambda 함수가 실행될 때 호출되는 함수
-exports.handler = async (event) => {
+export const handler = async (event) => {
   // 소스 버킷 및 파일 이름 설정
   const srcBucket = event.Records[0].s3.bucket.name;
   const srcKey = decodeURIComponent(
